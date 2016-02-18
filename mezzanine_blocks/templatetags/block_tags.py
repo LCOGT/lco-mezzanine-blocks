@@ -5,7 +5,7 @@ from django.db import models
 from django.core.cache import cache
 from mezzanine.conf import settings
 from mezzanine.utils.urls import slugify
-from mezzanine_blocks.models import Block, RichBlock, ImageBlock
+from mezzanine_blocks.models import Block, RichBlock
 
 
 register = template.Library()
@@ -133,9 +133,6 @@ class FlatBlockNode(template.Node):
             if flatblock is None:
                 if self.is_rich:
                     _klass = RichBlock
-
-                elif self.is_image:
-                    _klass = ImageBlock
 
                 else:
                     _klass = Block
