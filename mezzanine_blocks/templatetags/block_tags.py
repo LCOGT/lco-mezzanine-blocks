@@ -156,8 +156,7 @@ class FlatBlockNode(template.Node):
 
             if self.with_template:
                 tmpl = loader.get_template(real_template)
-                new_ctx.update({'flatblock':flatblock})
-                return tmpl.render(new_ctx)
+                return tmpl.render({'flatblock':flatblock})
             else:
                 return flatblock.content
         except Block.DoesNotExist:

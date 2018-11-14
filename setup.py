@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 NAME = 'mezzanine-blocks'
 
-VERSION = '0.9.4'
+VERSION = '0.9.5'
 
 DESCRIPTION = """
 A fork of https://github.com/renyi/mezzanine-blocks to make it work with Django 1.9
